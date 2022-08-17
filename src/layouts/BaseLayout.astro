@@ -1,4 +1,7 @@
 ---
+import Heading from '../components/Heading.astro';
+import Footer from '../components/Footer.astro';
+
 export interface IProps {
     title: string;
 }
@@ -7,7 +10,7 @@ const { title } = Astro.props as IProps;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html class="h-full w-full" lang="en">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width" />
@@ -22,17 +25,11 @@ const { title } = Astro.props as IProps;
         rel="stylesheet"
     />
 
-    <body class="bg-blue-primary">
-        <header class="flex items-center justify-between m-6">
-            <h1 class="font-secondary font-semibold text-white-primary ">Jonas.</h1>
-            <nav class="flex content-center text-grey-primary text-xs">
-                <a class="mx-1" href="/">Home</a>
-                <a class="mx-1" href="/blog">Blog</a>
-                <a class="mx-1" href="/projects">Projects</a>
-            </nav>    
-        </header>
+    <body class="bg-blue-primary h-full w-full flex flex-col">
+        <Heading />
         <main>
             <slot />
         </main>
+        <Footer />
     </body>
 </html>
