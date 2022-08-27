@@ -3,6 +3,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import github from "../../public/assets/github.svg";
 import linkedin from "../../public/assets/linkedin.svg";
 import mail from "../../public/assets/mail.svg";
+import HeadingMarked from "../components/HeadingMarked.astro";
 ---
 
 <BaseLayout title="Welcome to jonasboone.be">
@@ -18,27 +19,17 @@ import mail from "../../public/assets/mail.svg";
             >
                 I build things for the web.
             </h1>
-            <h1 class="font-secondary font-light text-white-primary text-xs">
-                I’m a passionate web developer from Antwerp, Belgium. I love
-                writing and building cool stuff. Currently developing innovative
-                digital solutions at Rombit Studio.
+            <h1 class="font-secondary text-white-primary text-sm">
+                I’m a passionate web developer. I love writing and building cool
+                stuff.
             </h1>
         </div>
-        <div class="flex justify-center mt-8">
+        <div class="flex justify-center mt-8 mb-10">
             <img class="px-2" src={github} alt="github logo" />
             <img class="px-2" src={linkedin} alt="linkedin logo" />
             <img class="px-2" src={mail} alt="email logo" />
         </div>
-        <!--TODO move this logic to a separate component -->
-        <div
-            class="text-white-primary mt-10 font-bold font-secondary text-xl inline-block"
-        >
-            <span
-                >What I've written
-                <span
-                    class="bg-green-secondary inline-block h-3 w-4/6 relative -top-5 -z-20"
-                ></span>
-            </span>
-        </div>
+        <HeadingMarked>Recently published</HeadingMarked>
+        <HeadingMarked>Featured projects</HeadingMarked>
     </div>
 </BaseLayout>
