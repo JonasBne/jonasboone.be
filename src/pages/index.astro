@@ -1,10 +1,11 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import github from "../../public/assets/github.svg";
-import linkedin from "../../public/assets/linkedin.svg";
-import mail from "../../public/assets/mail.svg";
+import github from "/assets/github.svg";
+import linkedin from "/assets/linkedin.svg";
+import mail from "/assets/mail.svg";
 import HeadingMarked from "../components/HeadingMarked.astro";
 import BlogCard from "../components/BlogCard.astro";
+import ProjectCard from "../components/ProjectCard.astro";
 ---
 
 <BaseLayout title="Welcome to jonasboone.be">
@@ -46,7 +47,16 @@ import BlogCard from "../components/BlogCard.astro";
                 tech stack.
             </div>
         </BlogCard>
-
         <HeadingMarked>Featured projects</HeadingMarked>
+        <ProjectCard>
+            <div slot="project-heading">jonasboone.be</div>
+            <div slot="project-summary">
+                My personal website built with Astro & Sanity.io
+            </div>
+            <div slot="project-keywords">Astro</div>
+            <div slot="project-keywords">React</div>
+            <div slot="project-keywords">Tailwindcss</div>
+            <div slot="project-keywords">Sanity</div>
+        </ProjectCard>
     </div>
 </BaseLayout>

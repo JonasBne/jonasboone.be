@@ -1,0 +1,22 @@
+---
+import github from "/assets/github.svg";
+import globe from "/assets/globe.svg";
+---
+
+<div class="bg-blue-secondary font-secondary mb-6 p-4 rounded">
+    <h1 class="text-green-primary font-semibold mb-2 text-lg">
+        <slot name="project-heading" />
+    </h1>
+    <div class="text-white-primary my-4 text-sm">
+        <slot name="project-summary" />
+    </div>
+    <div class="flex my-6">
+        <a class="pr-4" href="https://github.com/JonasBne"
+            ><img src={github} alt="github logo" />
+        </a>
+        <a><img src={globe} alt="github logo" /></a>
+    </div>
+    <div class="flex justify-between content-center text-grey-primary text-xs">
+        <slot name="project-keywords" />
+    </div>
+</div>
